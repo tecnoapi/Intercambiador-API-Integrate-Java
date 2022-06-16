@@ -23,6 +23,7 @@ import okhttp3.RequestBody;
 public class Apiintercambiador {
     
     private String token;
+    private String source_token;
     private Boolean sandbox;
     private String url;
     private final String app_url_sandbox = "https://sandbox.apiplataforma.online";
@@ -30,8 +31,9 @@ public class Apiintercambiador {
     private final String app_url_pro = "https://intercam.apiplataforma.online";
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
-    public Apiintercambiador(String token, Boolean sandbox){
+    public Apiintercambiador(String token, String source_token, Boolean sandbox){
         this.token = token;
+        this.source_token = source_token;
         if(sandbox){
             this.url = this.app_url_sandbox;
         }else{
@@ -105,6 +107,7 @@ public class Apiintercambiador {
           .method("GET", null)
           .addHeader("Content-Type", "application/json")
           .addHeader("x-access-token", this.token)
+          .addHeader("source-token", this.source_token)
           .build();
         Response response = client.newCall(request).execute();
         return response.body().string();
@@ -127,6 +130,7 @@ public class Apiintercambiador {
           .url(this.url+"/properties")
           .method("POST", body)
           .addHeader("x-access-token", this.token)
+          .addHeader("source-token", this.source_token)
           .addHeader("Content-Type", "application/json")
           .build();
         Response response = client.newCall(request).execute();
@@ -150,6 +154,7 @@ public class Apiintercambiador {
           .url(this.url+"/properties")
           .method("PUT", body)
           .addHeader("x-access-token", this.token)
+          .addHeader("source-token", this.source_token)
           .addHeader("Content-Type", "application/json")
           .build();
         Response response = client.newCall(request).execute();
@@ -171,6 +176,7 @@ public class Apiintercambiador {
             .url(this.url+"/properties")
             .method("DELETE", body)
             .addHeader("x-access-token", this.token)
+            .addHeader("source-token", this.source_token)
             .addHeader("Content-Type", "application/json")
             .build();
         Response response = client.newCall(request).execute();

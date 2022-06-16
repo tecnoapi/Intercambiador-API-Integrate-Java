@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Mavenproject1 {
 
     public static void main(String[] args) throws IOException {
-        Apiintercambiador ai = new Apiintercambiador("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIE1heSAzMCAyMDIyIDE2OjQxOjA1IEdNVCswMjAwIChob3JhIGRlIHZlcmFubyBkZSBFdXJvcGEgY2VudHJhbCkiLCJ1c2VySWQiOiI2Mjk0YmM3ZGU1ODVlODhiODYxNzYzZDAiLCJpYXQiOjE2NTM5MjE2NjV9.pqFNn58pI4dlRQGkSQzqQD6CukiZWiX17KEcbFJV-Ew", true);
+        Apiintercambiador ai = new Apiintercambiador("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIE1heSAzMCAyMDIyIDE2OjQxOjA1IEdNVCswMjAwIChob3JhIGRlIHZlcmFubyBkZSBFdXJvcGEgY2VudHJhbCkiLCJ1c2VySWQiOiI2Mjk0YmM3ZGU1ODVlODhiODYxNzYzZDAiLCJpYXQiOjE2NTM5MjE2NjV9.pqFNn58pI4dlRQGkSQzqQD6CukiZWiX17KEcbFJV-Ew", "123", true);
         
         System.out.println(ai.getProperties());
     }
