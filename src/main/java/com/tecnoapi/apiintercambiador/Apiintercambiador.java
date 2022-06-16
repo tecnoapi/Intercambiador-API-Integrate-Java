@@ -127,7 +127,7 @@ public class Apiintercambiador {
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, resultJson);
         Request request = new Request.Builder()
-          .url(this.url+"/properties")
+          .url(this.url+"/api-intercambiador")
           .method("POST", body)
           .addHeader("x-access-token", this.token)
           .addHeader("source-token", this.source_token)
@@ -151,7 +151,7 @@ public class Apiintercambiador {
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, resultJson);
         Request request = new Request.Builder()
-          .url(this.url+"/properties")
+          .url(this.url+"/api-intercambiador")
           .method("PUT", body)
           .addHeader("x-access-token", this.token)
           .addHeader("source-token", this.source_token)
@@ -173,7 +173,7 @@ public class Apiintercambiador {
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, resultJson);
         Request request = new Request.Builder()
-            .url(this.url+"/properties")
+            .url(this.url+"/api-intercambiador")
             .method("DELETE", body)
             .addHeader("x-access-token", this.token)
             .addHeader("source-token", this.source_token)
