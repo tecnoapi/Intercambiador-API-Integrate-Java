@@ -28,7 +28,7 @@ public class Apiintercambiador {
     private String url;
     private final String app_url_sandbox = "https://sandbox.apiplataforma.online";
     //private final String app_url_sandbox = "http://localhost:3000";
-    private final String app_url_pro = "https://intercam.apiplataforma.online";
+    private final String app_url_pro = "https://apiplataforma.online";
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
     public Apiintercambiador(String token, String source_token, Boolean sandbox){
